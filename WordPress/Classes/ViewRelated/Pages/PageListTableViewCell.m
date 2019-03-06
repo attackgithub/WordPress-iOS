@@ -96,6 +96,7 @@ static CGFloat const FeaturedImageSize = 120.0;
     [self configureForStatus];
     [self configureBadges];
     [self configureFeaturedImage];
+    [self configureAccessibility];
 }
 
 #pragma mark - Configuration
@@ -179,6 +180,11 @@ static CGFloat const FeaturedImageSize = 120.0;
                                                }];
         
     }
+}
+
+- (void)configureAccessibility
+{
+    self.accessibilityIdentifier = self.post.slugForDisplay;
 }
 
 @end
